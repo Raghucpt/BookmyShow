@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/home.css">
+</head>
+<body>
+
+  <div class="mainDiv">
+    <div class="navBar">
+      <div class="navDiv1">
+        <div class="navDiv11">
+          <img src="/logo.svg" alt="">
+          <input type="text" placeholder="Search for movies,Events,Plays,Sports and activites" name="" id="">
+        </div>
+        
+        <div class="navDiv12">
+          <select name="city" id="city">
+            <option value="Bengaluru">Bengaluru</option>
+            <option value="Mysore">Mysore</option>
+            <option value="Tumkur">Tumkur</option>
+            <option value="Manglore">Manglore</option>
+            <option value="Bidar">Bidar</option>
+            <option value="Hasana">Hasana</option>
+          </select>
+          <img class="picon" src="https://in.bmscdn.com/m6/images/my-profile/bms-user.png" alt="">
+          <a href="">Hi, Raghave...</a>
+        </div>
+        
+      </div>
+      
+      <div class="navDiv2">
+        <div class="navDiv21">
+          <a href="">Movies</a>&emsp;
+          <a href="">Stream <sup style="color: red; font-size: 9px;">NEW</sup> </a>&emsp;
+          <a href="">Events</a>&emsp;
+          <a href="">Plays</a>&emsp;
+          <a href="">Sports</a>&emsp;
+          <a href="">Activites</a>&emsp;
+          <a href="">Buzz</a>
+        </div>
+        <div class="navDiv22">
+          <a href="">ListYourShow <sup style="color: red; font-size: 9px;">NEW</sup> </a>&emsp;
+          <a href="">Corporates</a>&emsp;
+          <a href="">offers</a>&emsp;
+          <a href="">Gift Cards</a>
+
+        </div>
+        
+      </div>
+
+    </div>
+    <div class=" d-flex justify-content-center p-4 carosal">
+        <div id="carouselExampleInterval" class=" carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000" >
+                <img src= "/cr1.avif" class="d-block w-80" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src=<%= cr2image %> class="d-block w-80" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src=<%= cr3image %> class="d-block w-80" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+
+    <div class="bodyDiv">
+      <h3>Recommended Movies</h3>
+      <div class="titleDiv">
+          <% data.map((x)=> { %>
+              <div class="div1">
+                  <img src=<%= x.image %> alt="">
+                  <p><b><%= x.title %></b> </p>
+                  <p><%= x.discription %> </p>
+              </div>
+          <%}) %>
+      </div>
+    </div>
+
+    <div class="entDiv">
+      <h3>The Best of Entertainment</h3>
+      <div class="titleDiv">
+          <% data2.map((y)=> { %>
+              <div class="div1">
+                  <img src=<%= y.image %> alt="">
+              </div>
+          <%}) %>
+      </div>
+    </div>
+
+    <div class="primer">
+      <div class="primerBody">
+        <% data3.map((z)=>{ %>
+          <div class="primeHead">
+            <img src=<%= z.image %> alt="">
+          </div> <br><br>
+          <h2 style="color: white; margin-left: 50px;">Premieres</h2>
+          <p style="color: white; margin-left: 50px;">Brand new releases every Friday</p>
+        <%}) %>
+        <div class="primeimg">
+          <% data4.map((a)=>{ %>
+            <div class="primeHead">
+              <img src=<%= a.image %> alt="">
+            </div> <br><br>
+
+          <%}) %>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+    
+</body>
+</html>

@@ -1,0 +1,120 @@
+.bodyDiv{
+    width: 500px;
+    margin: 10px 130px;
+}
+
+.entDiv{
+    width: 500px;
+    margin: 10px 130px;
+}
+
+.entDiv img{
+    border-radius: 10px;
+    width: 230px;
+    height: 230px;
+}
+
+
+.bodyDiv img{
+    border-radius: 10px;
+    width: 230px;
+    height: 380px;
+}
+
+.titleDiv{
+    display: flex;
+    gap: 30px;
+}
+
+.navDiv1{
+    display: flex;
+    height: 70px;
+    background-color: rgb(47, 46, 46);
+    text-align: center;
+    align-items: center;
+}
+
+.navDiv1 input{
+    width: 500px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+#city{
+    background-color: rgb(47, 46, 46);
+    color: white;
+    border: none;
+}
+
+.navDiv1 a {
+    color: white;
+    text-decoration: none;
+}
+
+.picon{
+    width: 30px;
+    height: 30px;
+}
+
+.navDiv11{
+    margin-left: 130px;
+}
+
+.navDiv12{
+    display: flex;
+    margin-left: 330px;
+    gap: 30px;
+}
+
+.navDiv2
+{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(17, 16, 16);
+    align-items: center;
+    height: 40px;
+}
+
+.navDiv21 a
+{
+    text-decoration: none;
+    color: rgb(238, 233, 229);
+}
+
+.navDiv22 a
+{
+    text-decoration: none;
+    color: rgb(238, 233, 229); 
+}
+
+.navDiv21
+{
+    padding-left: 130px;
+}
+
+.navDiv22
+{
+    padding-right: 160px;
+}
+
+.primer
+{
+    height: 800px;
+    background-color:rgb(38, 38, 38);
+}
+
+.primeimg 
+{
+    display: flex;
+    margin-left: 50px;
+}
+
+.primeHead
+{
+    padding: 50px;
+}
+
+.primeimg img{
+    width: 250px;
+    gap: 30px
+}
